@@ -80,7 +80,7 @@ function App() {
                 
              <div 
               className=" bg-cover  bg-no-repeat bg-fixed"
-                style={{ backgroundImage: 'url("./technoverseBg.png")' }}
+                style={{ backgroundImage: 'url("./TechnoverseBg.png")' }}
              >
                   <Element name="home">
                     <Hero />
