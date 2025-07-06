@@ -152,14 +152,23 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-gray-800">
-          <p className="text-center text-gray-400">
-            © {new Date().getFullYear()} Technovers. All rights reserved.
-          </p>
-        </div>
+      <div className="mt-24 pt-10 bg-[#0B0B1F]">
+               {/* Thin centered line */}
+          <div className="mx-auto w-1/3 border-t-2 border-white/20 mb-4" />
+              {/* Copyright text */}
+              <p className="text-center text-gray-400">
+              © {new Date().getFullYear()} Technovers. All rights reserved.
+              </p>
+         </div>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
+
+
+
+
+

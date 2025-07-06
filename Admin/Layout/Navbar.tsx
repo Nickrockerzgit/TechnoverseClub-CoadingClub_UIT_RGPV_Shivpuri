@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../src/componant/pages/AuthContext"; // adjust path if needed
+import { useAuth } from "../src/componant/pages/AuthContext";
 
 const Navbar: React.FC = () => {
   const { userEmail, isAuthenticated, logout } = useAuth();
@@ -30,7 +30,8 @@ const Navbar: React.FC = () => {
     {isAuthenticated ? (
       <div className="flex items-center gap-4">
         <button
-          className="w-10 h-10 rounded-full bg-white/20 text-white font-bold flex items-center justify-center"
+         onClick={() => navigate("/admin")}
+          className="w-8 h-8  rounded-full flex items-center justify-center text-white font-semibold text-sm bg-white/20 "
           title={userEmail || "Profile"}
         >
           {getInitial()}

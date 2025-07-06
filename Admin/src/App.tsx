@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from "../src/componant/pages/AuthContext";
 
-import Home from '../Layout/Landingpage';
+import Home from './componant/pages/Home';
 import Login from './componant/pages/AuthPage';
 import AdminDashboard from "./componant/Admin/AdminDashboard";
 import CarouselManagement from "./componant/Admin/CarouselManagement";

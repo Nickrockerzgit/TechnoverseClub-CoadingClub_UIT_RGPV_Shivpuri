@@ -232,7 +232,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import { Menu, X, LogOut, User } from "lucide-react";
-import { useAuth } from "../src/components/AuthContext";
+import { useAuth } from "../components/AuthContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -287,14 +287,19 @@ const Navbar = () => {
 
   return (
    <nav className="fixed w-full bg-black/20 backdrop-blur-md z-50">
+  {/* <div className="flex justify-between items-center px-6 py-3"> */}
   <div className="flex justify-between items-center px-6 py-3">
     {/* Logo */}
     <div className="flex items-center rounded-md bg-white p-1">
-      <img src="/Logo.png" alt="Technovers Logo" className="h-8 w-auto max-w-[7.25rem]" />
+      <img src="/public/Logo.png" alt="Technovers Logo" className="h-8 w-auto max-w-[7.25rem]" />
     </div>
+
+
+
 
     {/* Desktop Menu */}
     <div className="hidden md:flex items-center space-x-6">
+    
       {menuItems.map((item) => (
         <ScrollLink
           key={item.name}
@@ -327,7 +332,7 @@ const Navbar = () => {
     </div>
 
     {/* Hamburger Icon - Mobile Only */}
-    <div className="md:hidden">
+    <div className="md:hidden "> 
       <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
@@ -413,7 +418,7 @@ const AuthButtons = ({
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setShowDropdown(!showDropdown)}
-        className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-600 text-white text-lg font-bold hover:bg-purple-700 transition-transform transform hover:scale-105"
+        className="flex items-center justify-center w-9 h-9 rounded-full bg-purple-600 text-white text-lg font-bold hover:bg-purple-700 transition-transform transform hover:scale-105"
       >
         {getInitial()}
       </button>

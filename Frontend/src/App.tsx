@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { Element } from "react-scroll";
-import Navbar from "../Layout/Navbar";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Home";
 import Carousel from "./components/Carousel";
 import About from "./components/About";
@@ -103,8 +103,8 @@ function App() {
                     <Courses />
                   </Element>
                   <FAQ />
-                  <Footer />
                 </div>
+                <Footer />
               </Layout>
             }
           />
