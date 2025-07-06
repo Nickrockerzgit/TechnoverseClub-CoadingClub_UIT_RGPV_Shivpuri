@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../src/componant/pages/AuthContext";
 
+
 const Navbar: React.FC = () => {
   const { userEmail, isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Navbar: React.FC = () => {
     {/* Logo */}
     <div className="flex items-center ml-6 rounded-md p-1">
       <img
-        src="./public/Logo.png"
+        src="./Logo.png"
         alt="Technovers Logo"
         className="h-8 w-[12 rem] rounded-lg object-contain"
       />
