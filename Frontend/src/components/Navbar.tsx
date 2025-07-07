@@ -291,7 +291,7 @@ const Navbar = () => {
   <div className="flex justify-between items-center px-6 py-3">
     {/* Logo */}
     <div className="flex items-center rounded-md bg-white p-1">
-      <img src="/public/Logo.png" alt="Technovers Logo" className="h-8 w-auto max-w-[7.25rem]" />
+      <img src="/Logo.png" alt="Technovers Logo" className="h-8 w-auto max-w-[7.25rem]" />
     </div>
 
 

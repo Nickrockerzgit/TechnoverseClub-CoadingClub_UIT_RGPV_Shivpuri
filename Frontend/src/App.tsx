@@ -35,6 +35,7 @@ import EventDetails from "./components/Events/Eventinfomation";
 import Dashboard from "./components/User/Dashboard";
 import AuthPage from "./components/AuthPage";
 import { AuthProvider } from "./components/AuthContext";
+import background from "../public/TechnoverseBg.png";
 
 // 🛠 Navbar Wrapper Component (conditionally render Navbar)
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -80,7 +81,7 @@ function App() {
                 
              <div 
               className=" bg-cover  bg-no-repeat bg-fixed"
-                style={{ backgroundImage: 'url("./technoverseBg.png")' }}
+                style={{ backgroundImage: 'url("/TechnoverseBg.png")' }}
              >
                   <Element name="home">
                     <Hero />
