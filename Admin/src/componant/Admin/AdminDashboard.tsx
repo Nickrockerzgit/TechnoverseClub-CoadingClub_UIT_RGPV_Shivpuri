@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { Users, Bell, ExternalLink, X, FileText, Check, X as XIcon } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { Link, useNavigate, Outlet, useLocation } from 'react-router-dom';
+import ScheduleMeet from './Meeting'; // Adjust the path as needed
+
 
 interface JoinRequest {
   id: number;
@@ -142,6 +144,10 @@ function AdminDashboard() {
     }
   };
 
+  function setShowScheduleMeet(arg0: boolean): void {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -166,6 +172,7 @@ function AdminDashboard() {
       <main className="flex-1 p-8 bg-gray-100 relative">
         {isMainDashboard && (
           <>
+
             {/* Dashboard Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {/* User Data Card */}
@@ -564,7 +571,7 @@ function AdminDashboard() {
                   <div>
                      <h3 className="font-semibold text-gray-700">Team Members</h3>
                        <ul className="text-sm mt-1 space-y-1">
-                             {selectedRegistration.members.map((member: { name: string; role: string; email: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
+                             {selectedRegistration.members.map((member: { name: string; role: string; email: string | number | boolean | SVGRectElement<any, string | SetConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }, index: Key | null | undefined) => (
                                <li key={index} className="border-b py-1">
                                   <span className="font-medium">{member.name.trim()}</span> - {member.role.trim()} 
                                  (<a href={`mailto:${member.email}`} className="text-blue-600 hover:underline">
@@ -657,7 +664,6 @@ function AdminDashboard() {
             </div>
           </div>
         )}
-
         {/* Render the nested route content */}
         <Outlet />
       </main>

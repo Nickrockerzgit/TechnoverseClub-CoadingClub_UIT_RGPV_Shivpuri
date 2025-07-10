@@ -97,6 +97,8 @@ const sponsorRoutes = require('./routes/sponsorRoutes');
 const eventRoutes = require('./routes/eventRoutes');
 const joinUsRoutes = require('./routes/joinUsRoutes');
 const vlogRoutes = require('./routes/vlogRoutes');
+const chatRoutes = require("./routes/chatRoutes");
+
 
 // Import database connection
 const { connectToDatabase } = require('./config/db');
@@ -146,6 +148,8 @@ app.use('/api/sponsors', sponsorRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/join-us', joinUsRoutes);
 app.use('/api/vlogs', vlogRoutes);
+app.use("/api/chat", chatRoutes);
+
 
 // Base route
 app.get('/', (req, res) => {
@@ -160,7 +164,8 @@ app.get('/', (req, res) => {
       sponsors: '/api/sponsors',
       events: '/api/events',
       joinUs: '/api/join-us',
-      vlogs: '/api/vlogs'
+      vlogs: '/api/vlogs',
+      chats : '/api/chat',
     }
   });
 });
